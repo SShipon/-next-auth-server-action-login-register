@@ -39,7 +39,7 @@ const signUpDefaultValues =
 
 export default function SignUpForm() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams.get('callbackUrl') || '/'
+  const callbackUrl = searchParams?.get('callbackUrl') || '/'
 
   const form = useForm<IUserSignUp>({
     resolver: zodResolver(UserSignUpSchema),
