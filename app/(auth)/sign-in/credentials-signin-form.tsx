@@ -36,7 +36,7 @@ const signInDefaultValues =
 
 export default function CredentialsSignInForm() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams.get('callbackUrl') || '/'
+  const callbackUrl = searchParams!.get('callbackUrl') ||  '/'
 
   const form = useForm<IUserSignIn>({
     resolver: zodResolver(UserSignInSchema),
@@ -100,10 +100,16 @@ export default function CredentialsSignInForm() {
               </FormItem>
             )}
           />
-
+           
+          {/* Reset Password Link */}
+          <div className="container mx-auto">
+            <Link href="/reset-password">
+              <span className='text-sm'>Reset Password</span></Link>
+            </div>
           <div>
             <Button type='submit'>Sign In</Button>
           </div>
+
           <div className='text-sm'>
             By signing in, you agree to &apos;s{' '}
             <Link href='/page/conditions-of-use'>Conditions of Use</Link> and{' '}
