@@ -2,7 +2,7 @@
 
 ## update .env.local
 
-- open https://console.cloud.google.com/apis/credentials
+
 - create a new OAuth 2.0 Client ID ans get its credentials
 
 ```txt
