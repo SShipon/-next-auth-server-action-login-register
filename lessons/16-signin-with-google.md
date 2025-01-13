@@ -8,6 +8,9 @@
 ```txt
      AUTH_GOOGLE_ID=xx.apps.googleusercontent.com
      AUTH_GOOGLE_SECRET=xx
+
+     http://localhost:3000/api/auth/callback/google
+     https://next-auth-server-action-login-register.vercel.app/api/auth/callback/google
 ```
 
 ## update auth.ts
